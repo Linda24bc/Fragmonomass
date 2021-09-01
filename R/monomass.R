@@ -1,5 +1,6 @@
 monomz <- function (sequence, fragments = "by")
-{
+{library(dplyr)
+  library(tidyr)
   results_list <- vector("list")
   for (sequence_number in 1:length(sequence)) {
     peptide_vector <- strsplit(sequence[sequence_number], split = "")[[1]]
